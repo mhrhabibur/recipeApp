@@ -45,6 +45,7 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailRecipes", for: indexPath)
+        //cell.textLabel?.text = "Hello"
         cell.textLabel?.text = allRecipes[indexPath.row].title
         return cell
     }

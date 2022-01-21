@@ -49,8 +49,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailRecipe") as? RecipesViewController {
             
             
-            vc.categoryName = myCategories[indexPath.row].title
-            navigationController?.pushViewController(vc, animated: true)
+            vc.categoryName = String(myCategories[indexPath.row].title)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
