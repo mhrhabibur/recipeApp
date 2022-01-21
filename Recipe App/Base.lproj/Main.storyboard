@@ -53,6 +53,50 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="34.821428571428569"/>
         </scene>
+        <!--Recipes View Controller-->
+        <scene sceneID="PW6-kH-oCn">
+            <objects>
+                <viewController storyboardIdentifier="DetailRecipe" id="qrx-3x-gcc" customClass="RecipesViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n9e-gp-QKD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="USY-03-F3F">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailRecipes" id="aNg-Vq-d60">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aNg-Vq-d60" id="zDI-Hj-Kc3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qrx-3x-gcc" id="GOY-Ev-6WV"/>
+                                    <outlet property="delegate" destination="qrx-3x-gcc" id="Da7-9g-5GP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Vt-Mk-kuO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Vt-Mk-kuO" firstAttribute="trailing" secondItem="USY-03-F3F" secondAttribute="trailing" id="634-n1-B48"/>
+                            <constraint firstItem="USY-03-F3F" firstAttribute="leading" secondItem="0Vt-Mk-kuO" secondAttribute="leading" id="G08-Ge-DCH"/>
+                            <constraint firstItem="0Vt-Mk-kuO" firstAttribute="bottom" secondItem="USY-03-F3F" secondAttribute="bottom" id="KKZ-Wy-gir"/>
+                            <constraint firstItem="USY-03-F3F" firstAttribute="top" secondItem="0Vt-Mk-kuO" secondAttribute="top" id="u4c-Ot-ez7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="USY-03-F3F" id="3PK-eC-ACg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5CK-Qs-XyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="35"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="AeL-MU-Sh9">
             <objects>

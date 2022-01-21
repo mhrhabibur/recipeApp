@@ -39,8 +39,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath)
-        cell.textLabel?.text = myCategories[indexPath.row].title
-        return cell
+            cell.textLabel?.text = myCategories[indexPath.row].title
+            return cell
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailRecipe") as? RecipesViewController {
+            
+            
+            vc.categoryName = myCategories[indexPath.row].title
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
 
