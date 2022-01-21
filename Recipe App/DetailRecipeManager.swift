@@ -18,13 +18,21 @@ class DetailRecipeManager {
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
-                if let recipes = try? JSONDecoder().decode(DetailRecipe.self, from: data) {
-                    completion(recipes, nil)
-                    //print(recipes.categories[3].title)
-                    return
-                    
-                    
-                   
+                do{
+                    let recipes = try JSONDecoder().decode(DetailRecipe.self, from: data)
+                    completion(recipes,nil)
+                } catch let DecodingError.typeMismatch(type, context){
+                    print("\(type) \(context.debugDescription)")
+                    completion(nil,error)
+                } catch let DecodingError.valueNotFound(value, context){
+                    print("\(value) \(context.debugDescription)")
+                    completion(nil,error)
+                } catch let DecodingError.keyNotFound(key, context){
+                    print("\(key) \(context.debugDescription)")
+                    completion(nil,error)
+                } catch let e{
+                    print("\(e.localizedDescription)")
+                    completion(nil,e)
                 }
             }
             completion(nil, error)

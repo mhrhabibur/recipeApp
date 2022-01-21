@@ -27,7 +27,7 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
         detailRecipeManager.fetchData(searchText: searchText) { detailRecipe, error in
             if let myRecipe = detailRecipe {
                 self.allRecipes = myRecipe.recipes
-                
+                print(self.allRecipes)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -45,7 +45,7 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailRecipes", for: indexPath)
-        //cell.textLabel?.text = "Hello"
+        
         cell.textLabel?.text = allRecipes[indexPath.row].title
         return cell
     }

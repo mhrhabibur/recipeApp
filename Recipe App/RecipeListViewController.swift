@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RecipeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var myCategories = [RecipeCategories]()
     

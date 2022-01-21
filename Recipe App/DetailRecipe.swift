@@ -16,7 +16,7 @@ struct Details: Decodable {
     let socialUrl: Double
     let publisher: String
     let sourceUrl: String
-    let id: Int
+    let id: String
     let publishedId: String
     let title: String
 }
