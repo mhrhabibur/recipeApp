@@ -10,7 +10,8 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
     
-  var  recipeDescriptionManagaer = RecipeDescriptionManagaer()
+    @IBOutlet weak var recipeImage: UIImageView!
+    var  recipeDescriptionManagaer = RecipeDescriptionManagaer()
     
     var id: String?
     var recipeID: String = ""
@@ -31,7 +32,14 @@ class DescriptionViewController: UIViewController {
                 
                 
                 DispatchQueue.main.async {
-                    self.titleLabel.text = recipeDescription.recipe.id
+                    self.titleLabel.text = recipeDescription.recipe.title
+                    
+                    
+                    let url = URL(string: recipeDescription.recipe.imageUrl)
+                    let data = try? Data(contentsOf: url!)
+                    
+                    self.recipeImage.image = UIImage(data: data!)
+                    
                 }
             }
             

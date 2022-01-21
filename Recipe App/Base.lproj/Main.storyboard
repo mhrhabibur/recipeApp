@@ -105,18 +105,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brW-jV-SMI">
-                                <rect key="frame" x="20" y="341" width="374" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brW-jV-SMI">
+                                <rect key="frame" x="20" y="341" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0x-6L-dfF">
+                                <rect key="frame" x="20" y="44" width="374" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="cQn-Vh-Gn9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NCI-Jy-aq5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y0x-6L-dfF" firstAttribute="top" secondItem="NCI-Jy-aq5" secondAttribute="top" id="0xn-C2-9Xj"/>
+                            <constraint firstItem="Y0x-6L-dfF" firstAttribute="leading" secondItem="brW-jV-SMI" secondAttribute="leading" id="Dtw-AJ-yQ5"/>
+                            <constraint firstItem="Y0x-6L-dfF" firstAttribute="leading" secondItem="NCI-Jy-aq5" secondAttribute="leading" constant="20" id="Mtw-NN-ehn"/>
+                            <constraint firstItem="brW-jV-SMI" firstAttribute="top" secondItem="Y0x-6L-dfF" secondAttribute="bottom" constant="29" id="RTb-a9-v06"/>
+                            <constraint firstItem="Y0x-6L-dfF" firstAttribute="trailing" secondItem="brW-jV-SMI" secondAttribute="trailing" id="XUv-mQ-5XF"/>
+                            <constraint firstItem="NCI-Jy-aq5" firstAttribute="trailing" secondItem="Y0x-6L-dfF" secondAttribute="trailing" constant="20" id="f7h-Jt-wcc"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="recipeImage" destination="Y0x-6L-dfF" id="IMz-9b-u7g"/>
                         <outlet property="titleLabel" destination="brW-jV-SMI" id="eMV-rS-zqv"/>
                     </connections>
                 </viewController>
