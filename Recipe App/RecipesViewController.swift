@@ -50,4 +50,15 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Description") as? DescriptionViewController {
+            
+            
+            vc.id = allRecipes[indexPath.row].id
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    
+    
 }

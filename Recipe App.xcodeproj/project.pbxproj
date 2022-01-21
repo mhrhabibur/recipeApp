@@ -19,6 +19,8 @@
 		17FB7BC5279A62E500F610FD /* DetailRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FB7BC4279A62E500F610FD /* DetailRecipe.swift */; };
 		17FB7BC7279A646200F610FD /* DetailRecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FB7BC6279A646100F610FD /* DetailRecipeManager.swift */; };
 		A726A3FD279ABBAE00510524 /* RecipeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726A3FC279ABBAE00510524 /* RecipeDescription.swift */; };
+		A726A3FF279AC0B000510524 /* RecipeDescriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726A3FE279AC0B000510524 /* RecipeDescriptionManager.swift */; };
+		A726A401279AC30400510524 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726A400279AC30400510524 /* DescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		17FB7BC4279A62E500F610FD /* DetailRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipe.swift; sourceTree = "<group>"; };
 		17FB7BC6279A646100F610FD /* DetailRecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipeManager.swift; sourceTree = "<group>"; };
 		A726A3FC279ABBAE00510524 /* RecipeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDescription.swift; sourceTree = "<group>"; };
+		A726A3FE279AC0B000510524 /* RecipeDescriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDescriptionManager.swift; sourceTree = "<group>"; };
+		A726A400279AC30400510524 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +76,11 @@
 				1739D9912799CB2700069068 /* SceneDelegate.swift */,
 				1739D9932799CB2700069068 /* RecipeListViewController.swift */,
 				17FB7BC2279A61E900F610FD /* RecipesViewController.swift */,
+				A726A400279AC30400510524 /* DescriptionViewController.swift */,
 				1739D9A32799CBBD00069068 /* Recipe.swift */,
 				17FB7BC4279A62E500F610FD /* DetailRecipe.swift */,
 				A726A3FC279ABBAE00510524 /* RecipeDescription.swift */,
+				A726A3FE279AC0B000510524 /* RecipeDescriptionManager.swift */,
 				1739D9A72799CD3500069068 /* RecipeManager.swift */,
 				17FB7BC6279A646100F610FD /* DetailRecipeManager.swift */,
 				1739D9952799CB2700069068 /* Main.storyboard */,
@@ -158,11 +164,13 @@
 			files = (
 				1739D9942799CB2700069068 /* RecipeListViewController.swift in Sources */,
 				1739D9A82799CD3500069068 /* RecipeManager.swift in Sources */,
+				A726A3FF279AC0B000510524 /* RecipeDescriptionManager.swift in Sources */,
 				17FB7BC7279A646200F610FD /* DetailRecipeManager.swift in Sources */,
 				1739D9902799CB2700069068 /* AppDelegate.swift in Sources */,
 				17FB7BC5279A62E500F610FD /* DetailRecipe.swift in Sources */,
 				A726A3FD279ABBAE00510524 /* RecipeDescription.swift in Sources */,
 				1739D9922799CB2700069068 /* SceneDelegate.swift in Sources */,
+				A726A401279AC30400510524 /* DescriptionViewController.swift in Sources */,
 				17FB7BC3279A61E900F610FD /* RecipesViewController.swift in Sources */,
 				1739D9A42799CBBD00069068 /* Recipe.swift in Sources */,
 			);

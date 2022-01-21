@@ -7,7 +7,14 @@
 
 import Foundation
 
+
 struct RecipeDescription: Decodable {
+    let recipe: Recipes
+    
+    
+}
+
+struct Recipes: Decodable {
     
         let imageUrl: String
         let socialUrl: Double
